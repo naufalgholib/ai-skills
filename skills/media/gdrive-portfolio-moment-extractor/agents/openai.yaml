@@ -1,0 +1,3 @@
+interface:
+  display_name: "Google Drive Portfolio Moment Extractor"
+  short_description: "Extract HD frames and moments directly from Google Drive footage without API keys"

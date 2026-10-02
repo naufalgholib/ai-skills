@@ -49,7 +49,7 @@ Skills for multimedia manipulation, frame extraction, video sampling, and web as
 | Skill | Description | Category | Invocation |
 |---|---|---|---|
 | **[instagram-moment-extractor](./skills/media/instagram-moment-extractor/SKILL.md)** | Extract high-definition visual assets & video frames from Instagram Reels, Stories, Highlights, and Posts with 3-tier fallback access and dual-format PNG lossless + WebP web optimization. | Media | Model / User |
-
+| **[gdrive-portfolio-moment-extractor](./skills/media/gdrive-portfolio-moment-extractor/SKILL.md)** | Extract master high-definition portfolio moments and video frames directly from Google Drive raw/edited footage (Full HD/4K) without API keys, with micro-sampling sharpness selection and dual-format PNG + WebP exports. | Media | Model / User |
 ---
 
 ## Repository Structure
@@ -64,13 +64,18 @@ ai-skills/
     ├── README.md
     └── media/
         ├── README.md
+        ├── gdrive-portfolio-moment-extractor/
+        │   ├── SKILL.md                   # Core skill instructions & architecture
+        │   ├── agents/
+        │   │   └── openai.yaml            # Agent interface metadata
+        │   └── scripts/
+        │       └── extract_gdrive_moments.py # Standalone CLI extraction tool
         └── instagram-moment-extractor/
-            ├── SKILL.md           # Core skill instructions & recipes
+            ├── SKILL.md                   # Core skill instructions & recipes
             ├── agents/
-            │   └── openai.yaml    # Agent interface metadata
+            │   └── openai.yaml            # Agent interface metadata
             └── scripts/
-                └── extract_moments.py  # Standalone CLI extraction tool
-```
+                └── extract_moments.py     # Standalone CLI extraction tool
 
 ---
 

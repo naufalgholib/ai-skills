@@ -72,15 +72,16 @@ The skill provides a standalone CLI script located in `scripts/extract_gdrive_mo
 
 ```bash
 # Extract 3 evenly-spaced sharp moments with separate png/ and webp/ subfolders
-python3 /home/naufal/.pi/agent/skills/gdrive-portfolio-moment-extractor/scripts/extract_gdrive_moments.py \
+python3 scripts/extract_gdrive_moments.py \
   --drive-id 1pqBEUy3TJgx9uCcQdA0IKoqMa4GWFc15 \
   --output-dir ./output/couple-a \
   --prefix moment \
   --max-moments 3 \
   --format dual \
   --separate-folders
+
 # Extract moments at explicit timestamps (in seconds)
-python3 /home/naufal/.pi/agent/skills/gdrive-portfolio-moment-extractor/scripts/extract_gdrive_moments.py \
+python3 scripts/extract_gdrive_moments.py \
   --drive-id 1pqBEUy3TJgx9uCcQdA0IKoqMa4GWFc15 \
   --output-dir ./output/couple-a \
   --prefix akad \
@@ -88,7 +89,7 @@ python3 /home/naufal/.pi/agent/skills/gdrive-portfolio-moment-extractor/scripts/
   --format dual
 
 # Download and convert high-resolution photo (HEIC/JPG)
-python3 /home/naufal/.pi/agent/skills/gdrive-portfolio-moment-extractor/scripts/extract_gdrive_moments.py \
+python3 scripts/extract_gdrive_moments.py \
   --drive-id 15HQ7UdMPtaeXOQJ0Nt0PwTEMrApWpb99 \
   --output-dir ./output/couple-a \
   --prefix moment_01_photo \
@@ -116,7 +117,7 @@ python3 /home/naufal/.pi/agent/skills/gdrive-portfolio-moment-extractor/scripts/
 
 ```python
 import sys
-sys.path.insert(0, '/home/naufal/.pi/agent/skills/gdrive-portfolio-moment-extractor/scripts')
+sys.path.insert(0, './scripts')
 from extract_gdrive_moments import (
     download_gdrive_video,
     download_gdrive_photo,

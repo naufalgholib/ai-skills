@@ -76,6 +76,7 @@ ai-skills/
             │   └── openai.yaml            # Agent interface metadata
             └── scripts/
                 └── extract_moments.py     # Standalone CLI extraction tool
+```
 
 ---
 

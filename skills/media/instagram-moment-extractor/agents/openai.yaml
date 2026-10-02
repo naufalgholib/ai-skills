@@ -1,0 +1,3 @@
+interface:
+  display_name: "Instagram Moment Extractor"
+  short_description: "Extract high-definition video frames and portfolio moments from Instagram media"
